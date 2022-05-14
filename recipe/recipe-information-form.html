@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="/recipe/css/style-recipe-information.css">
+    <script src="/recipe/js/script-recipe-information.js"></script>
+
+</head>
+<body>
+    
+    <div class="wrapper-container">
+        <!-- 왼쪽 사이드바 고정 -->
+        <div class="item-container left-sidebar">
+                <ul>
+                    <li class="recipe-left-sidebar"><a class="#top" href="#">상단</a></li>
+                    <li class="recipe-left-sidebar"><a href="#material">재료</a></li>
+                    <li class="recipe-left-sidebar"><a href="#textRecipe">간단 레시피</a></li>
+                    <li class="recipe-left-sidebar"><a href="#photoRecipe">상세 레시피</a></li>
+                    <li class="recipe-left-sidebar"><a href="#photoReview">사진 후기</a></li>
+                    <li class="recipe-left-sidebar"><a href="#textReview">한줄 후기</a></li>
+                </ul>
+        </div>
+
+        <!-- 중앙 메인 컨테이너 -->
+        <div class="item-container">
+            <div class="recipe-header content-witdh">
+                <!-- 중앙 맨 위에 띄워질 이미지 -->
+                <img src="resources/샌드위치 이미지.jpg" alt="" class="recipe-header-image">
+                <div class="recipe-header-viewlike">
+                    <!-- 해당 레시피의 좋아요 갯수, 조회수 출력 -->
+                    <img src="resources/eye-fill.svg" alt="" class="recipe-header-viewcount-img">
+                    <p class="recipe-header-viewcount">111</p>
+                    <!-- 좋아요 이미지 클릭 시, changeheart() 메소드 작동 -> 이미지를 바꿔주고, 좋아요 표시 및 갯수 상승 -->
+                    <img src="resources\heart.svg" alt="" class="recipe-header-likecount-img" onclick="changeheart();">
+                    <p class="recipe-header-likecount">100개</p>
+                </div>
+
+                <!-- 레시피의 서브타이틀과 메인 타이틀 출력 -->
+                <div class="recipe-title">
+                    <p class="item-subtitle">그리스식 샐러드속을 넣은</p>
+                    <p class="item-title">올리브 샌드위치</p>
+                </div>
+
+                <!-- 레시피에 대한 소개글 -->
+                <div class="recipe-introduce">
+                    <p>올리브와 브리치즈, 토마토, 양상추를 듬뿍 넣어 그리스식 샐러드를 만들어 샌드위치를 만들어보세요. 
+                        불에 굽거나 양념을 더하지 않아 자연 재료 그대로의 신선함을 느낄 수 있답니다. 
+                        불포화지방산이 다량 함유된 올리브를 잔뜩 넣어 고소한 풍미가 무척 좋아요. 
+                        치즈까지 들어가 자칫 느끼할 수도 있어 신선한 양상추와 토마토로 상큼함을 살렸답니다.
+                    </p>
+                </div>
+                
+                <!-- 레시피의 요약.. 걸리는 시간과 난이도, 몇 인분인지까지 -->
+                <div class="background-gray recipe-summary-all">
+                    <div class="recipe-time recipe-summary">
+                        <img src="resources/clock.svg" alt="시간">
+                        <p>시간</p>
+                    </div>
+                    <div class="recipe-level recipe-summary">
+                        <img src="resources/bar-chart-line.svg" alt="난이도">
+                        <p>난이도</p>
+                    </div>
+                    <div class="recipe-people recipe-summary">
+                        <img src="resources/person.svg" alt="몇인분">
+                        <p>1인분</p>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- 레시피와 관련된 태그들 정리 -->
+            <div class="result-text-row">관련태그</div>
+            <div class="recipe-tag content-witdh">
+                <div class="background-gray">
+                    <div class="recipe-tag-lists">
+                        <div class="recipe-tag-list">#1</div>
+                        <div class="recipe-tag-list">#2</div>
+                        <div class="recipe-tag-list">#3</div>
+                        <div class="recipe-tag-list">#4</div>
+                        <div class="recipe-tag-list">#5</div>
+                        <div class="recipe-tag-list">#6</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 레시피와 관련된 재료 정리 -->
+            <div class="result-text-row" id="material">재료</div>
+            <div class="recipe-material content-witdh">
+                <div class="background-gray">
+                    <div class="recipe-material-lists">
+                        <div class="recipe-material-list">식빵</div>
+                        <div class="recipe-material-quantity">2장</div>
+                        <div class="recipe-material-list">양상추</div>
+                        <div class="recipe-material-quantity">약간</div>
+                        <div class="recipe-material-list">토마토<br>슬라이스</div>
+                        <div class="recipe-material-quantity">2장</div>
+                        <div class="recipe-material-list">베이컨</div>
+                        <div class="recipe-material-quantity">2장</div>
+                        <div class="recipe-material-list"></div>
+                        <div class="recipe-material-quantity"></div>
+                        <div class="recipe-material-list"></div>
+                        <div class="recipe-material-quantity"></div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <!-- 텍스트로만 기입되는 간단 레시피 -->
+            <div class="result-text-row" id="textRecipe"> 간단 레시피</div>
+            <div class="recipe-textRecipe content-witdh">
+                <div class="recipe-content-text">
+                    <p>
+                        1. 올리브는 반으로 잘라 칼로 눌러 으깨고 토마토는 0.5cm 폭으로 동그랗게 썰어주세요. 양상추는 깨끗이 씻어 준비하고 양파는 채칼로 얇게 썰어줍니다.
+                    </p>
+                </div>
+                <div class="recipe-content-text">
+                    <p>
+                        2. 브리치즈는 20등분 해주세요.
+                    </p>
+                </div>
+                <div class="recipe-content-text">
+                    <p>
+                        3. 빵을 그릴팬에 굽고 한쪽 면에 버터를 바른 뒤 양상추-토마토-양파-올리브-브리치즈 순으로 올려주세요.
+                    </p>
+                </div>
+                <div class="recipe-content-text">
+                    <p>
+                        4. 버터를 바른 빵으로 덮으면 완성이랍니다.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="result-text-row" id="photoRecipe">상세 레시피</div>
+            <div class="recipe-photoRecipe content-witdh">
+                <div class="recipe-content-image">
+                    <img src="/recipe/resources/샌1.jpg" alt="">
+                </div>
+                <div class="recipe-content-text">
+                    <p>
+                        1. 올리브는 반으로 잘라 칼로 눌러 으깨고 토마토는 0.5cm 폭으로 동그랗게 썰어주세요. 양상추는 깨끗이 씻어 준비하고 양파는 채칼로 얇게 썰어줍니다.
+                    </p>
+                </div>
+                <div class="recipe-content-image">
+                    <img src="/recipe/resources/샌2.jpg" alt="">
+                </div>
+                <div class="recipe-content-text">
+                    <p>
+                        2. 브리치즈는 20등분 해주세요.
+                    </p>
+                </div>
+                <div class="recipe-content-image">
+                    <img src="/recipe/resources/샌3.jpg" alt="">
+                </div>
+                <div class="recipe-content-text">
+                    <p>
+                        3. 빵을 그릴팬에 굽고 한쪽 면에 버터를 바른 뒤 양상추-토마토-양파-올리브-브리치즈 순으로 올려주세요.
+                    </p>
+                </div>
+                <div class="recipe-content-image">
+                    <img src="/recipe/resources/샌4.jpg" alt="">
+                </div>
+                <div class="recipe-content-text">
+                    <p>
+                        4. 버터를 바른 빵으로 덮으면 완성이랍니다.
+                    </p>
+                </div>
+
+
+            </div>
+            
+            <div class="result-text-row" id="photoReview">
+                <p>사진 후기</p>
+                <a href="">
+                    <button class="recipe-photoReview-enroll">글작성</button>
+                </a>
+            </div>
+            <div class="recipe-photoReview content-witdh">
+                <div class="recipe-photoReview-list">
+                    <a href="" class="list-recipe-columns">
+                        <img src="resources/요리 이미지.jpg" alt="" class="item-image">
+                        <p class="item-subtitle">싱싱한 겉바속촉 샐러드</p>
+                        <p class="item-title"><strong>에어프라이어 두부 버섯 샐러드</strong></p>
+                    </a>
+
+                    <a href="" class="list-recipe-columns">
+                        <img src="resources/요리 이미지.jpg" alt="" class="item-image">
+                        <p class="item-subtitle">싱싱한 겉바속촉 샐러드</p>
+                        <p class="item-title"><strong>에어프라이어 두부 버섯 샐러드</strong></p>
+                    </a>
+
+                    <a href="" class="list-recipe-columns">
+                        <img src="resources/요리 이미지.jpg" alt="" class="item-image">
+                        <p class="item-subtitle">싱싱한 겉바속촉 샐러드</p>
+                        <p class="item-title"><strong>에어프라이어 두부 버섯 샐러드</strong></p>
+                    </a>
+
+                    <a href="" class="list-recipe-columns">
+                        <img src="resources/요리 이미지.jpg" alt="" class="item-image">
+                        <p class="item-subtitle">싱싱한 겉바속촉 샐러드</p>
+                        <p class="item-title"><strong>에어프라이어 두부 버섯 샐러드</strong></p>
+                    </a>
+                </div>
+                <a class="recipe-photoReview-viewMore" href='http://www.naver.com'>
+                    <p>더보기</p>
+                </a>
+            </div>
+            
+            <div class="result-text-row" id="textReview">한줄 후기</div>
+            <div class="recipe-textReview content-witdh">
+
+                <div class="textreview-lists">
+                    
+                    <div class="textreview-container">
+
+                        <div class="textreview-inputForm">
+                            <form action="" method="method">
+                                <div class="textreview-items">
+                                    <img src="/recipe/resources/person-circle.svg" alt="">
+                                    <div class="textreview-items-input">
+                                        <div class="textreview-items-header">
+                                            <p>유저 아이디</p>
+                                        </div>
+                                        <div class="textreview-items-input-body">
+                                            <textarea name="" id="" cols="50" rows="4" style="resize:none"></textarea>
+                                            <button type="submit">등록</button>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="textreview-items">
+                            <img src="/recipe/resources/person-circle.svg" alt="">
+                            <div class="textreview-items-content">
+                                <div class="textreview-items-header">
+                                    <p>유저 아이디</p>
+                                    <div class="textreview-delete">
+                                        <img src="resources/trash3-fill.svg" alt="">
+                                    </div>
+                                </div>
+        
+                                <div class="textreview-items-body">한줄 후기가 보여질 곳</div>
+                                
+                                <div class="textreview-items-footer">
+                                    <p>후기작성날짜</p>
+                                    <div class="textreview-like">
+                                        <img src="resources/hand-thumbs-up.svg" alt="">
+                                        <p>좋아요</p>
+                                    </div>
+                                    <div class="textreview-declaration">
+                                        <img src="resources/flag.svg" alt="">
+                                        <p>신고</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="textreview-items">
+                            <img src="/recipe/resources/person-circle.svg" alt="">
+                            <div class="textreview-items-content">
+                                <div class="textreview-items-header">
+                                    <p>유저 아이디</p>
+                                    <div class="textreview-delete">
+                                        <img src="resources/trash3-fill.svg" alt="">
+                                    </div>
+                                </div>
+                                
+                                <div class="textreview-items-body">한줄 후기가 보여질 곳</div>
+                                
+                                <div class="textreview-items-footer">
+                                    <p>후기작성날짜</p>
+                                    <div class="textreview-like">
+                                        <img src="resources/hand-thumbs-up.svg" alt="">
+                                        <p>좋아요</p>
+                                    </div>
+                                    <div class="textreview-declaration">
+                                        <img src="resources/flag.svg" alt="">
+                                        <p>신고</p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+
+                        <div class="textreview-items">
+                            <img src="/recipe/resources/person-circle.svg" alt="">
+                            <div class="textreview-items-content">
+                                <div class="textreview-items-header">
+                                    <p>유저 아이디</p>
+                                    <div class="textreview-delete">
+                                        <img src="resources/trash3-fill.svg" alt="">
+                                    </div>
+                                </div>
+                                
+                                <div class="textreview-items-body">한줄 후기가 보여질 곳</div>
+                                
+                                <div class="textreview-items-footer">
+                                    <p>후기작성날짜</p>
+                                    <div class="textreview-like">
+                                        <img src="resources/hand-thumbs-up.svg" alt="">
+                                        <p>좋아요</p>
+                                    </div>
+                                    <div class="textreview-declaration">
+                                        <img src="resources/flag.svg" alt="">
+                                        <p>신고</p>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <br><br>
+            
+            <ul class="pagination pagination-sm">
+                <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+                <li class="page-item"><a class="page-link" href="#">1</a></li>
+                <li class="page-item active"><a class="page-link" href="#">2</a></li>
+                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                <li class="page-item"><a class="page-link" href="#">Next</a></li>
+            </ul>
+            
+            
+        </div>
+
+        
+        <!-- 오른쪽 여백 -->
+        <div class="item-container">3</div>
+    </div>
+
+    <script>
+        // 좋아요 버튼 클릭 시 이미지가 변하고, 좋아요가 카운팅되도록 서블릿으로 전송한다.
+        $(document).on('click', '.textreview-like', function(){
+
+            // console.log($('.textreview-like>img').attr('src'));
+            var srcName = $('.textreview-like>img').attr('src');
+            if(srcName == 'resources/hand-thumbs-up.svg'){
+                $('.textreview-like>img').attr('src', 'resources/hand-thumbs-up-fill.svg');
+                // location.href='';
+            } else if (srcName == 'resources/hand-thumbs-up-fill.svg'){
+                $('.textreview-like>img').attr('src', 'resources/hand-thumbs-up.svg');
+               // location.href='';
+            }
+        });
+
+        // 신고 버튼 클릭 시 이미지를 변화시키고, 신고 담당 서블릿으로 전달;
+        $(document).on('click', '.textreview-declaration', function(){
+            
+            var srcName = $('.textreview-declaration>img').attr('src');
+            
+            if(srcName == 'resources/flag.svg'){
+                $('.textreview-declaration>img').attr('src', 'resources/flag-fill.svg');
+                // location.href='';
+            } else if (srcName == 'resources/flag-fill.svg'){
+                $('.textreview-declaration>img').attr('src', 'resources/flag.svg');
+                // location.href='';
+            }
+        });
+
+    </script>
+</body>
+</html>

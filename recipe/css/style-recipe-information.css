@@ -1,0 +1,330 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+.left-sidebar ul{
+    list-style-type: none;
+    padding: 0px;
+    width: 120px;
+    background: #fae3de;
+    height: 250px;
+    overflow: auto;
+    position: fixed;
+    margin-top: 300px;
+}
+
+.recipe-left-sidebar a {
+    text-decoration: none;
+    padding: 10px;
+    display: block;
+    color: rgb(19, 17, 17);
+}
+
+.recipe-left-sidebar a:hover {
+    color: #fff;
+}
+
+
+.wrapper-container {
+    display: grid;
+    width: 1280px;
+    height: auto;
+    grid-template-columns: 20% 55% 25%;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 100px;
+
+}
+
+/* 중앙 전체 구조 */
+.item-container{
+    /* border: 1px solid #515050; */
+    height: 100%;
+    margin: auto;
+    width: 100%;
+}
+
+/* 태그, 재료 등 각각의 콘텐츠의 영역 설정 */
+.content-witdh{
+    width: 90%;
+    margin: auto;
+}
+
+/* 레시피 해더 부분 */
+.recipe-header-viewlike{
+    display: flex;
+    justify-content: right;
+    margin-top: 1rem;
+    margin-right: 3rem;
+}
+
+.recipe-header-viewlike>a{
+    padding-top: 10;
+}
+
+.recipe-header-image{
+    width: 500px;
+    height: 350px;
+}
+
+.recipe-header-viewlike>img {
+    size: 1rem;
+}
+
+.recipe-header-viewlike>p {
+    margin-right: 1rem;
+    margin-left: 0.5rem;
+}
+
+.recipe-title {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.recipe-title>p{
+    font-size: 1.2rem;
+}
+
+.item-title {
+    font-weight: bolder;
+}
+
+.recipe-introduce> p{
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+    line-height: 30px;
+}
+
+/* 분홍색 배경 색상 */
+.background-gray{
+    background-color: #fae3de;
+    color:#515050;
+    margin: 2rem;
+    padding: 1rem;
+    border-radius: 50%;
+}
+
+/* 각각 단계의 타이틀바 */
+.result-text-row {
+    border: 1px solid #fd4500;
+    border-width: 0 0 1px 10px;
+    font-size: 22px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+    padding: 5px 0 9px 15px;
+    text-align: left;
+}
+
+
+.recipe-summary-all{
+    display: flex;
+}
+
+.recipe-summary{
+    display: flex;
+    column-gap: 1rem;
+    margin: auto;
+}
+
+.recipe-tag-lists, .recipe-material-lists{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    gap: 1rem 0;
+    margin: auto;
+    padding: 1.5rem;
+    align-items: center;
+}
+
+/* 상세 레시피 img 태그 설정 */
+.recipe-content-image img{
+    width: 80%;
+    height: 80%;
+}
+
+/* 사진후기 */
+
+#photoReview{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recipe-photoReview-enroll{
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    border: 1px solid #fd4500;
+    padding: 5px;
+    width: 80px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.recipe-photoReview-list{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 2rem;
+
+}
+
+.recipe-content-text{
+    width: 90%;
+    text-align: left;
+    border-bottom: 1px solid lightgray;
+    line-height: 2rem;
+    margin-bottom: 2rem;
+}
+
+.recipe-photoRecipe{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.item-image{
+    width: 100%;
+    height: auto;
+}
+
+.item-subtitle {
+    width: 100%;
+    margin-top: 8px;
+    text-align: center;
+    color: rgb(97, 97, 97);
+    font-weight: normal;
+    font-family: "Noto Sans KR", Helvetica, "Helvetica Neue", Arial, "sans-serif";
+    font-size: 14px;
+}
+
+.item-title{
+    width: 100%;
+    margin-top: 2px;
+    text-align: center;
+    font-family: "Noto Sans KR", Helvetica, "Helvetica Neue", Arial, "sans-serif";
+    font-size: 15px;
+    font-weight: bold;
+    color: #515050 ;
+}
+
+.item-summary{
+    width: 100%;
+    margin-top: 8px;
+    display: flex;
+    justify-content: center;
+    column-gap: 12px;
+}
+
+.item-summary p{
+    margin-left: 5px;
+    color: rgb(158, 158, 158);
+    font-weight: normal;
+    font-family: "Noto Sans KR", Helvetica, "Helvetica Neue", Arial, "sans-serif";
+    font-size: 14px;
+
+}
+
+.recipe-photoReview-viewMore{
+    text-decoration: none;
+    color: #515050 ;
+    width: 100%;
+}
+
+.recipe-photoReview-viewMore>p{
+    background-color: #fae3de;
+    width: 110px;
+    height: 30px;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    line-height: 170%;
+}
+
+/* 한줄 후기 */
+
+.textreview-container{
+    display: grid;
+    row-gap: 20px;
+}
+
+.textreview-items-input-body{
+    display: flex;
+    margin-top:10px;
+    justify-content: space-around;
+}
+
+.textreview-items-input-body>button{
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    border: 1px solid #fae3de;
+    padding: 5px;
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    text-align: center;
+    background-color: white;
+    margin-top: 60px;
+}
+
+.textreview-items{
+    background-color: #fae3de;
+    height: 130px;
+    display: grid;
+    grid-template-columns: 15% 85%;
+}
+
+.textreview-items>img{
+    width: 50%;
+    height: 50%;
+    margin: auto;
+}
+
+.textreview-items-content{
+    display: grid;
+    grid-template-rows: 25% 40% 20%;
+    row-gap: 10px;
+}
+
+.textreview-items-header{
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.textreview-items-footer{
+    width: 95%;
+    display: flex;
+    justify-content: right;
+    column-gap: 20px;
+}
+
+.textreview-items-footer>div{
+    cursor: pointer;
+}
+
+.textreview-items-footer>div>img{
+    width: 15px;
+    height: 15px;
+}
+
+.textreview-items-footer p{
+    display: inline-block;
+    margin-right: 10px;
+}
+
+
+.pagination{
+    justify-content: center;
+}
