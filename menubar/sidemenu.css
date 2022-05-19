@@ -1,0 +1,306 @@
+
+#sideImg{
+    width: 20px;
+  }
+  
+  
+  .icon-bar {
+  position: fixed;
+  top: 70%;
+  -webkit-transform: translateY(-60%);
+  -ms-transform: translateY(-60%);
+  transform: translateY(-60%);
+  right:calc(50% - 610px); /* right:calc(50% - social bar width/2) */
+  }
+  
+  @media screen and (max-width:1100px){
+  .icon-bar {
+  display: none;
+  }
+  } 
+  
+  .icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  transition: all 0.3s ease;
+  color: white;
+  
+  }
+  
+  .icon-bar>ul>li a:hover {
+  width: 50px;
+  background-color: rgb(244, 118, 80);
+  }
+  
+  
+  
+  .menu {
+  background: #fefefe;
+  color: white;
+  }
+  
+  .clock {
+  background: #fdfdfd;
+  color: white;
+  }
+  
+  .heart {
+  background: #ffffff;
+  color: white;
+  }
+  
+  .search {
+  background: #ffffff;
+  color: white;
+  }
+  
+  
+  
+
+  #sideImg{
+    width: 20px;
+  }
+  
+  
+  .icon-bar {
+  position: fixed;
+  top: 70%;
+  -webkit-transform: translateY(-60%);
+  -ms-transform: translateY(-60%);
+  transform: translateY(-60%);
+  right:calc(50% - 610px); /* right:calc(50% - social bar width/2) */
+  }
+  
+  @media screen and (max-width:1100px){
+  .icon-bar {
+  display: none;
+  }
+  } 
+  
+  .icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 12px;
+  transition: all 0.3s ease;
+  color: white;
+  
+  }
+  
+
+  
+  
+  .menu {
+  background: #fefefe;
+  color: white;
+  }
+  
+  .clock {
+  background: #fdfdfd;
+  color: white;
+  }
+  
+  .heart {
+  background: #ffffff;
+  color: white;
+  }
+  
+  .search {
+  background: #ffffff;
+  color: white;
+  }
+  
+
+
+  #Msearch {
+    width: 150px;
+    height: 30px;
+    box-sizing: border-box;
+    color: white;
+    background-color: #fd4500;
+    border-radius: 20px;
+    border: 1px solid #fd4500;
+    box-shadow: 0px 0px 4px rgb(251, 197, 172);
+    margin-left: 80px;
+  }
+
+  #Msearch:hover {
+      cursor: pointer;
+  }
+
+  #Simage {
+      width: 20px;
+  }
+
+  #SB-image {
+      margin: -3px;
+      width: 20px;
+  }
+
+  #Sbutton {
+    border-style: none;
+    background-color: rgba(254, 252, 253, 0.2);
+  }
+
+  #Rsearch {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      margin-left: 20px;
+      width: 225px;
+      height: 30px;
+      box-sizing: border-box;
+      background-color: rgba(254, 252, 253, 0.2);
+      border-radius: 20px;
+      border: 1px solid rgba(255, 60, 1);
+      box-shadow: 0px 0px 4px rgb(251, 197, 172);
+  }
+
+  input:focus {outline: 2px solid rgb(253, 190, 167);}
+  
+    #close-sidenav {
+          cursor: pointer;
+          font-size: 3em;
+          margin-top: -5px;
+          margin-right: 2px;
+          float: right;
+        }
+        #sidenav {
+          height: 100%; width: 300px;
+          top: 0; right: -300px;
+          background: rgb(255, 245, 241);
+          position: fixed;
+          transition: 0.4s;
+          z-index: 1050;
+        }
+        #sidenav ul { margin-top: 50px; padding: 20px; list-style-type: none;}
+        #sidenav>header>p {
+            margin-left: 20px;
+            margin-top: 20px;
+        }
+        #sidenav>ul>li>a { 
+            color: black;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        #sidenav header, a {
+          color: rgb(66, 66, 66);
+          display: block;
+          text-decoration: none;
+        }
+        
+        #sidenav header { 
+            border-bottom: 1px solid black;
+            }
+        #sidenav a:hover { font-size : 20px; color: #fd4500; }
+  
+  
+
+  
+        #close-sidenav2 {
+            cursor: pointer;
+            font-size: 3em;
+            margin-top: -5px;
+            margin-right: 2px;
+            float: right;
+          }
+          #sidenav2 {
+            height: 100%; width: 300px;
+            top: 0; right: -300px;
+            background: rgb(255, 245, 241);
+            position: fixed;
+            transition: 0.4s;
+            z-index: 1050;
+          }
+          #sidenav2 ul { margin: 0; padding: 0; list-style-type: none;}
+          #sidenav2>header>p {
+              margin-left: 20px;
+              margin-top: 20px;
+          }
+          #sidenav2>ul>li>a { 
+              color: black;
+              margin-left: 20px;
+              margin-top: 20px;}
+          #sidenav2 header, a {
+            color: rgb(66, 66, 66);
+            display: block;
+            text-decoration: none;
+          }
+          
+          #sidenav2 header { 
+              border-bottom: 1px solid black;
+              }
+          #sidenav2 a:hover { background: rgb(250, 210, 199); }
+  
+
+  
+          #close-sidenav3 {
+            cursor: pointer;
+            font-size: 3em;
+            margin-top: -5px;
+            margin-right: 2px;
+            float: right;
+          }
+          #sidenav3 {
+            height: 100%; width: 300px;
+            top: 0; right: -300px;
+            background: rgb(255, 245, 241);
+            position: fixed;
+            transition: 0.4s;
+            z-index: 1050;
+          }
+          #sidenav3 ul { margin: 0; padding: 0; list-style-type: none;}
+          #sidenav3>header>p {
+              margin-left: 20px;
+              margin-top: 20px;
+          }
+          #sidenav3>ul>li>a { 
+              color: black;
+              margin-left: 20px;
+              margin-top: 20px;}
+          #sidenav3 header, a {
+            color: rgb(66, 66, 66);
+            display: block;
+            text-decoration: none;
+          }
+          
+          #sidenav3 header { 
+              border-bottom: 1px solid black;
+              }
+          #sidenav3 a:hover { background: rgb(250, 210, 199); }
+
+
+            
+    #close-sidenav4 {
+        cursor: pointer;
+        font-size: 3em;
+        margin-top: -5px;
+        margin-right: 2px;
+        float: right;
+      }
+      #sidenav4 {
+        height: 100%; width: 300px;
+        top: 0; right: -300px;
+        background: rgb(255, 245, 241);
+        position: fixed;
+        transition: 0.4s;
+        z-index: 1050;
+      }
+      #sidenav4 ul { margin: 0; padding: 0; list-style-type: none;}
+      #sidenav4>header>p {
+          margin-left: 20px;
+          margin-top: 20px;
+      }
+      #sidenav4>ul>li>a { 
+          color: black;
+          margin-left: 20px;
+          margin-top: 20px;}
+      #sidenav4 header, a {
+        color: rgb(66, 66, 66);
+        display: block;
+        text-decoration: none;
+      }
+      
+      #sidenav4 header { 
+          border-bottom: 1px solid black;
+          }
+      #sidenav4 a:hover { background: rgb(250, 210, 199); }

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<link rel="stylesheet" type="text/css" href="css/main.css" />
+		<link rel="stylesheet" type="text/css" href="css/sidemenu.css" />
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+		<title>헤더</title>
+
+  
+    <script type="text/javascript">
+			$( document ).ready(function() {
+
+			var $body = $(document.body);
+
+			var scrollCutOff = scrollCutOff || ($(window).height() >= 825 ? 300 : 75),
+			  headerHeight = headerHeight || 825;
+			
+			$(window).scroll(function(e) {
+			  if ($('nav.top[data-no-scroll]').length)
+				return;
+
+			  if (this.pageYOffset >= scrollCutOff && !$body.hasClass('scrolled')) {
+				$body.addClass('scrolled');
+			  } else if (this.pageYOffset < scrollCutOff && $body.hasClass('scrolled')) {
+				$body.removeClass('scrolled');
+			  }
+			  if (this.pageYOffset >= headerHeight) {
+				_header_carousel_active = false;  // 스크롤 다운
+			  } else {
+				_header_carousel_active = true;   // 스크롤 업
+			  }
+			});
+			});
+
+
+			$( document ).ready(function() {
+	  $('.trigger').on('click', function() {
+		 $('.modal-wrapper').toggleClass('open');
+		$('.page-wrapper').toggleClass('blur-it');
+		 return false;
+	  });
+	});
+
+		</script>
+        
+		<style>
+			.top{
+				width: 1280px;
+				margin: auto;
+				
+			}
+		</style>
+	</head>
+	<body>
+		
+
+  <!-- 스크롤 하기 전 로고 -->
+  <div class="top1">
+    <a href="#"><img src="img/logo2.png" class="mainlogo"></a>
+  </div>
+  
+  <!-- 고정 메뉴바 -->
+  <nav class="top fixed">
+
+    <a href="#" class="logo"><img src="img/logo3.png" class="fixedlogo"></a>
+
+    <ul id="menu2">
+      <li><a href="#">RECIPIES</a></li>
+      <li><a href="#">MAGAZINE</a></li>
+      <li><a href="#">EVENT</a></li>
+    </ul>
+
+	<div id="menu3">
+		<a href="#"><img src="img/user.jpg" id="userIcon"></a>
+		<div class="page-wrapper">
+		  <a class="btn trigger" href="#"><img src="img/menuIcon.png" id="toggleIcon"></a>
+		</div>
+	</div>	
+
+  </nav>
+  
+
+    <!-- 컨텐츠 영역 -->
+
+    
+      <div id="content_1">
+
+        <div id="content_1_1"></div>
+		<br><br><br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+      </div>
+        
+	</body>
+  
+    <!-- Modal -->
+	<div class="modal-wrapper">
+		<div class="modal">
+		  <div class="head">
+			<a class="btn-close trigger" href="#">
+				<i class="material-icons" style="font-size:50px">clear</i>
+			</a>
+		  </div>
+		  <div class="content">
+			  <div class="good-job">
+				<ul id="navi">
+					<li id="bigMenu"><a href="">
+						01<br>
+						RECIPIES</a></li>
+					<li id="bigMenu">
+						<a href="">
+						02<br>
+						MAGAZINE</a>
+					</li>
+					<li id="bigMenu">
+						<a href="">
+						03<br>
+						EVENT<br></a>
+					</li>
+					<li id="bigMenu"><a href="">
+						04<br>
+						MY PAGE</a>
+						<ul>
+							<li><a href="">내 정보 관리</a></li>
+							<li><a href="">내가 작성한 댓글</a></li>
+							<li><a href="">내가 작성한 레시피 후기</a></li>
+							<li><a href="">찜한 레시피 모아보기</a></li>
+						</ul>
+					</li>
+					<li id="bigMenu"><a href="">
+						05<br>
+						SUPPORT</a>
+						<ul>
+							<li><a href="">공지사항</a></li>
+							<li><a href="">자주 묻는 질문</a></li>
+							<li><a href="">일대일 문의</a></li>
+						</ul>
+					</li>
+				</ul>
+			  </div>
+		  </div>
+		</div>
+	  </div>
+	
+	  <a style="display:scroll; position:fixed; bottom:20px; right:20px; z-index:999" href="#">
+		<img src="https://postfiles.pstatic.net/MjAyMjA0MTVfMTk5/MDAxNjQ5OTU1NzIyODk3.KurVfXJq66mb1V2Y3tY413ap8JlmL8OpM9HtQcSEISEg.-dtoXBGQERkmy4FPxvr1DugLhOcYnNxnRfaEMJ9goCcg.PNG.yuzyoe/2-2.png?type=w773" alt="top"></a>
+		
+
+	    <div class="icon-bar">
+			<a href="#" class="menu"><img id="Simage" src="./img/menu2.png"></a> 
+			<a href="#" class="clock"><img id="Simage" src="./img/clock (1).png"></a> 
+			<a href="#" class="heart"><img id="Simage" src="./img/heart.png"></a> 
+			<a href="#" class="search"><img id="Simage" src="./img/search.png"></a>
+		  </div>
+
+		  <nav id="sidenav">
+			<span id="close-sidenav">&times;</span>
+			<header><p>메뉴</p></header>
+			<ul style="text-align: center;">
+			  <li><a href="#">레시피</a></li>
+			  <li><a href="#">매거진</a></li>
+			  <li><a href="#">이벤트</a></li>
+			  <li><a href="#">고객센터</a></li>
+			  <li><a href="#">마이페이지</a></li>
+			</ul>
+		  </nav>
+	   
+		  <script>
+			$(".menu").click(function() {
+				$("#sidenav").css("right", "0");
+			  $("body").addClass("dark")
+			});
+			$("#close-sidenav").click(function() {
+				$("#sidenav").css("right", "-300px");
+			  $("body").removeClass("dark");
+			});
+			</scrip>
+		   
+	  
+		   <nav id="sidenav2">
+			<span id="close-sidenav2">&times;</span>
+			<header><p>최근 본 레시피</p></header>
+			<h6 style="margin-left: 140px;">최대 10개까지 볼 수 있습니다.</h6>
+			<p style="margin-left: 20px;">총 1개</p>
+			<ul>
+			  <li><a href="#"><img src="menuIcon.png"></a></li>
+			</ul>
+		  </nav>
+	   
+		  <script>
+			$(".clock").click(function() {
+				$("#sidenav2").css("right", "0");
+			  $("body").addClass("dark")
+			});
+			$("#close-sidenav2").click(function() {
+				$("#sidenav2").css("right", "-300px");
+			  $("body").removeClass("dark");
+			});
+			</script>
+	  
+	  
+			<nav id="sidenav3">
+			  <span id="close-sidenav3">&times;</span>
+			  <header><p>내가 찜한 레시피</p></header>
+			  <h6 style="margin-left: 140px;">최대 10개까지 볼 수 있습니다.</h6>
+			  <p style="margin-left: 20px;">총 1개</p>
+			  <ul>
+				<li><a href="#"><img src="menuIcon.png"></a></li>
+			  </ul>
+			</nav>
+	  
+			<script>
+			  $(".heart").click(function() {
+				  $("#sidenav3").css("right", "0");
+				$("body").addClass("dark")
+			  });
+			  $("#close-sidenav3").click(function() {
+				  $("#sidenav3").css("right", "-300px");
+				$("body").removeClass("dark");
+			  });
+			  </script>
+	  
+	  
+			  
+			<nav id="sidenav4">
+			  <span id="close-sidenav4">&times;</span>
+			  <form action="" method="GET"></form>
+			  <header><p>재료로 검색</p></header>
+			  <ul>
+				<li><a href="#">흠</a></li>
+				<li><a href="#">흠</a></li>
+				<li><a href="#">흠</a></li>
+			  </ul>
+			  
+			  <input type="submit" id="Msearch" value="재료로 검색하기">
+			  </form>
+			  <br><br><br><br>
+			  <header><p>레시피로 검색</p></header>
+			  <form action="" method="GET">
+				<input type="text" id="Rsearch" name="Rsearch">
+				<button id="Sbutton"><img alt="Submit Form" id="SB-image"src="./img/search.png"></button>
+			  </form>
+		</nav>
+	  
+			<script>
+			  $(".search").click(function() {
+				  $("#sidenav4").css("right", "0");
+				$("body").addClass("dark")
+			  });
+			  $("#close-sidenav4").click(function() {
+				  $("#sidenav4").css("right", "-300px");
+				$("body").removeClass("dark");
+			  });
+			  </script>
+
+
+
+
+  <footer class="footer">
+
+    <p>(주)오!꾹  |  사업자등록번호 333-10-1004  |   서비스 이용문의 : 010-3333-1004 <br>
+    copyright @o!cook ALL RIGHTS RESERVED</p>
+
+  </footer>
+</html>
