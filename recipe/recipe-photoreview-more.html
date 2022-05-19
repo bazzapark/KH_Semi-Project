@@ -33,13 +33,13 @@
         <div class="item-container item4">4</div>
         <div class="item-container item5">5</div>
         <div class="item-container item6">
-            <a href="" class="list-recipe-columns" data-toggle="modal" data-target="#myModal">
+            <a class="list-recipe-columns" data-toggle="modal" data-target="#myModal">
                 <img src="resources/샌드위치 이미지.jpg" alt="" class="item-image">
                 <div class="item-review-summary">
                     <div class="review-createDate">작성날짜</div>
                     <div class="review-like">
                         <img src="/recipe/resources/heart.svg" alt="">
-                        <p class="review-like-text">좋아요</p>
+                        <p class="review-like-text">112</p>
                     </div>
                 </div>
                 <div class="item-review-content">
@@ -149,7 +149,7 @@
                     <div class="review-createDate">작성날짜</div>
                     <div class="review-like">
                         <img src="/recipe/resources/heart.svg" alt="">
-                        <p class="review-like-text">좋아요</p>
+                        <p class="review-like-text">100</p>
                     </div>
                 </div>
                 <div class="item-review-content">
@@ -229,6 +229,27 @@
 
             });
 
+            $(function(){
+            // 좋아요 버튼 클릭 시 이미지가 변하고, 좋아요가 카운팅되도록 서블릿으로 전송한다.
+            $(document).on('click', '.review-like', function(){
+
+            // console.log($('.textreview-like>img').attr('src'));
+            var srcName = $('.review-like>img').attr('src');
+            var likeCount = parseInt($('.review-like-text').text());
+            console.log(likeCount)
+            if(srcName == 'resources/heart.svg'){
+                $('.review-like>img').attr('src', 'resources/heart-fill.svg');
+                likeCount++;
+                $('.review-like-text').text(likeCount);
+                // location.href='';
+            } else if (srcName == 'resources/heart-fill.svg'){
+                $('.review-like>img').attr('src', 'resources/heart.svg');
+                likeCount--;
+                $('.review-like-text').text(likeCount);
+                // location.href='';
+            }
+        });
+});
 
     </script>
 

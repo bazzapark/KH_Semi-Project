@@ -11,7 +11,7 @@
       margin: 0;
       box-sizing: border-box;
     }
-     
+    
     #sidebar {
       width: 200px;
       background-color: #fae3de;

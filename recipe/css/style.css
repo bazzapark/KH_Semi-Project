@@ -259,15 +259,21 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     color: #515050 ;
 }
 
-.item-summary{
+.item-summary, .item-likeConunt{
     width: 100%;
     margin-top: 8px;
     display: flex;
     justify-content: center;
-    column-gap: 12px;
+    column-gap: 10px;
 }
 
-.item-summary p{
+.item-likeConunt{
+    justify-content: right;
+    column-gap: 5px;
+}
+
+
+.item-summary p, .item-likeConunt p{
     margin-left: 5px;
     color: rgb(158, 158, 158);
     font-weight: normal;

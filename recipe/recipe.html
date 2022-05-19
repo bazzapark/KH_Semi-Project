@@ -82,16 +82,22 @@
         <div class="item-container item4">4</div>
         <div class="item-container item5">5</div>
         <div class="item-container item6">
-            <a href="" class="list-recipe-columns">
+            <a class="list-recipe-columns">
                 <img src="resources/요리 이미지.jpg" alt="" class="item-image">
+                <div class="item-likeConunt">
+                    <img src="resources/heart.svg" alt="" class="recipe-header-image">
+                    <p class="item-like">100</p>
+                </div>
                 <p class="item-subtitle">싱싱한 겉바속촉 샐러드</p>
                 <p class="item-title"><strong>에어프라이어 두부 버섯 샐러드</strong></p>
+
                 <div class="item-summary">
                     <img src="resources/bar-chart-line.svg" alt="" class="recipe-header-image">
                     <p class="item-summary-level">초급</p>
                     <img src="resources/clock.svg" alt="" class="recipe-header-image">
                     <p class="item-summary-time">30분</p>
                 </div>
+
             </a>
 
             <a href="" class="list-recipe-columns">
@@ -333,6 +339,24 @@
 
             });
 
+            // 좋아요 버튼 클릭 시 이미지가 변하고, 좋아요가 카운팅되도록 서블릿으로 전송한다.
+            $(document).on('click', '.item-likeConunt>img, .item-likeConunt>p', function(){
+
+            // console.log($('.textreview-like>img').attr('src'));
+            var srcName = $('.item-likeConunt>img').attr('src');
+            var likeCount = parseInt($('.item-like').text());
+            if(srcName == 'resources/heart.svg'){
+                $('.item-likeConunt>img').attr('src', 'resources/heart-fill.svg');
+                likeCount++;
+                $('.item-like').text(likeCount);
+                // location.href='';
+            } else if (srcName == 'resources/heart-fill.svg'){
+                $('.item-likeConunt>img').attr('src', 'resources/heart.svg');
+                likeCount--;
+                $('.item-like').text(likeCount);
+                // location.href='';
+            }
+            });
 
     </script>
 

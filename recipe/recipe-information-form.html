@@ -37,9 +37,9 @@
                     <!-- 해당 레시피의 좋아요 갯수, 조회수 출력 -->
                     <img src="resources/eye-fill.svg" alt="" class="recipe-header-viewcount-img">
                     <p class="recipe-header-viewcount">111</p>
-                    <!-- 좋아요 이미지 클릭 시, changeheart() 메소드 작동 -> 이미지를 바꿔주고, 좋아요 표시 및 갯수 상승 -->
-                    <img src="resources\heart.svg" alt="" class="recipe-header-likecount-img" onclick="changeheart();">
-                    <p class="recipe-header-likecount">100개</p>
+                    <!-- 좋아요 이미지 클릭 시, 좋아요 표시 및 갯수 상승 -->
+                    <img src="resources/heart.svg" alt="" class="recipe-header-likecount-img">
+                    <p class="recipe-header-likecount">100</p>
                 </div>
 
                 <!-- 레시피의 서브타이틀과 메인 타이틀 출력 -->
@@ -415,6 +415,22 @@
                         $('.modal-review-content').text(content);
                     });
 
+        });
+
+        // 좋아요 버튼 클릭 시 이미지가 변하고, 좋아요가 카운팅되도록 서블릿으로 전송한다.
+        $(document).on('click', '.recipe-header-likecount-img, .recipe-header-likecount', function(){
+            // console.log($('.recipe-header-likecount-img').attr('src'));
+            var srcName = $('.recipe-header-likecount-img').attr('src');
+            var likeCunt = parseInt( $('.recipe-header-likecount').text() );
+            if(srcName == 'resources/heart.svg'){
+                $('.recipe-header-likecount-img').attr('src', 'resources/heart-fill.svg');
+                $('.recipe-header-likecount').text((likeCunt+1));
+                // location.href='';
+            } else if (srcName == 'resources/heart-fill.svg'){
+                $('.recipe-header-likecount-img').attr('src', 'resources/heart.svg');
+                $('.recipe-header-likecount').text(likeCunt-1);
+                // location.href='';
+            }
         });
 
 
