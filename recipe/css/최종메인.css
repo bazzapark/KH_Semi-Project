@@ -88,6 +88,10 @@
             text-align: center;
         }
 
+        .test2text{
+            font-size: 15px;
+        }
+
         .test2>div>img{
             width: 100px;
             height: 100px;
